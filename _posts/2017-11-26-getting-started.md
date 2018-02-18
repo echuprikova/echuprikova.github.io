@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Sleek
+title: Solar Tirol WebGIS
 featured-img: sleek
 mathjax: true
 ---
