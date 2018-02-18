@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://janczizikow.github.io/sleek" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://echuprikova.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:  # replace with your_twitter_username or comment to remove link from footer
 github_username:   # replace with your_github_username or comment to remove link from footer
 instagram_username:  # replace with your_instagram_username or comment to remove link from footer
@@ -26,7 +26,7 @@ disqus:
 # Build settings
 markdown: kramdown
 highlighter: rouge # or pygments or null
-theme: jekyll-sleek
+remote_theme: jekyll-sleek
 exclude:
   - README.md
   - node_modules
