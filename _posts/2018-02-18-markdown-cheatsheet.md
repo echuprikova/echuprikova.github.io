@@ -1,25 +1,11 @@
 ---
 layout: post
-title: Tutorial. Spatial Visualization with R Shiny.
-summary: Tutorial on R Shiny
-featured-img: 0create_project
+title: Tutorial on R Shiny
+summary: R, Shiny and Leaflet for Interactive Mapping
+featured-img: emile-perron-190221
 
 ---
 
----
-title: "R, Shiny and Leaflet for Interactive Mapping"
-author: "Visualization of Geodata (MSc.Cartography)"
-date: "January 8, 2018"
-output:
-  word_document: default
-  pdf_document: default
-  slidy_presentation: default
-  beamer_presentation: default
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Introduction to R
 
@@ -52,7 +38,7 @@ Shiny provides an automatic reactive binding between inputs and outputs which we
 ## Assignment
 
 ```{r echo=FALSE, out.width='90%'}
-knitr::include_graphics('./fig/0create_project.png')
+knitr::include_graphics('./fig/0create_project.jpg')
 ```
 
 Create an interactive mapping application that facilitates visualization of population data in Munich. The application should include a map panel, where the data visualized as a thematic map and powered by a panel where the theme could be changed. The application should include a panel with the histogram showing the distribution of the phenomena. The legend should be interactively updated along with the thematic layer. The interaction with the map should provide a user with the information of the interest by placing the mouse over a region. The selected region should be highlighted with a hover.
@@ -65,19 +51,19 @@ To get started launch RStudio.
 1. Create a new project in R Studio
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/1create_project.png')
+knitr::include_graphics('./fig/1create_project.jpg')
 ```
 
 2. Select project type as Shiny Web Application
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/2create_project.png')
+knitr::include_graphics('./fig/2create_project.jpg')
 ```
 
 3. Define the name directory and the application location.
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/3create_project.png')
+knitr::include_graphics('./fig/3create_project.jpg')
 ```
 
 It creates two scripts in R Studio named ui.R and server.R.
@@ -91,7 +77,7 @@ By default you will see such code:
 
 
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('./fig/1test_example.png')
+knitr::include_graphics('./fig/1test_example.jpg')
 ```
 
 4. The next step is to immediately install some packages that we need for the further work.
@@ -116,7 +102,7 @@ To install necessary R packages, run this command at your `R prompt (Console)`!.
 If you launch the application you will see the default example.
 
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('./fig/4create_project.png')
+knitr::include_graphics('./fig/4create_project.jpg')
 ```
 
 In this application, a user might investigate Old Faithful Geyser Data, which shows waiting time between eruptions and the duration of the eruption of the Old Faithful geyser in Yellowstone National Park, Wyoming, USA. In this App, you can observe a histogram graph and interactive slider. Whenever you change the value in the slider the histogram would reactively change its appearance.
@@ -313,7 +299,7 @@ shinyServer(function(input, output) {
 Result:
 
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('./fig/5app.png')
+knitr::include_graphics('./fig/5app.jpg')
 ```
 
 ### The Map Widget
@@ -460,7 +446,7 @@ The Leaflet package includes convenience functions for creating color legends. I
 __Run the application to see the changes.__
 
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('./fig/5_5app.png')
+knitr::include_graphics('./fig/5_5app.jpg')
 ```
 
 __Therefore, the file server.R should look like this:__
@@ -535,13 +521,13 @@ In Shiny, there are three kinds of objects in reactive programming: reactive sou
 More details can be found here: https://shiny.rstudio.com/articles/reactivity-overview.html
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/6app.png')
+knitr::include_graphics('./fig/6app.jpg')
 ```
 
 In a simple Shiny application, reactive sources are accessible through the input object, and reactive endpoints are accessible through the output object.
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/7app.png')
+knitr::include_graphics('./fig/7app.jpg')
 ```
 
 The reactive expression can assist us to define a topic for the choropleth map by selection from the dropdown list and simultaneously update the thematic map and map legend according to the selected value.
@@ -564,7 +550,7 @@ First of all, we need a list of topics in the UI. Therefore, we create an input 
 Providing `selectInput` we can get a list of the themes based on the variables we have defined.
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/8app.png')
+knitr::include_graphics('./fig/8app.jpg')
 ```
 
 This input might be accessed in server side through the expression `input$color`.
@@ -576,7 +562,7 @@ Using the reactive expression you can create a histogram of the Districts data.
 It should include a list of the available topics, by selecting the topic the histogram will be updated simultaneously to visualize the distribution of the input.
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/9app.png')
+knitr::include_graphics('./fig/9app.jpg')
 ```
 
 __Hint__:
@@ -692,7 +678,7 @@ Correct the labels. Now the labels include only district names from the data. In
 
 
 ```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics('./fig/10app.png')
+knitr::include_graphics('./fig/10app.jpg')
 ```
 
 Hint:
