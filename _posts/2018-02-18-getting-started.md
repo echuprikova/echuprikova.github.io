@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solar Tirol WebGIS
+title: SolarTirol WebGIS
 featured-img: sleek
 mathjax: true
 ---
